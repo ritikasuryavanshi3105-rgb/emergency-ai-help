@@ -10,33 +10,167 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AiAnalysisRouteImport } from './routes/ai-analysis'
+import { Route as HistoryRouteImport } from './routes/history'
+import { Route as HomeRouteImport } from './routes/home'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as ProfileRouteImport } from './routes/profile'
+import { Route as ReportRouteImport } from './routes/report'
+import { Route as ResolvedRouteImport } from './routes/resolved'
+import { Route as SeverityResultRouteImport } from './routes/severity-result'
+import { Route as SplashRouteImport } from './routes/splash'
+import { Route as TrackingRouteImport } from './routes/tracking'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AiAnalysisRoute = AiAnalysisRouteImport.update({
+  id: '/ai-analysis',
+  path: '/ai-analysis',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HistoryRoute = HistoryRouteImport.update({
+  id: '/history',
+  path: '/history',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HomeRoute = HomeRouteImport.update({
+  id: '/home',
+  path: '/home',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProfileRoute = ProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReportRoute = ReportRouteImport.update({
+  id: '/report',
+  path: '/report',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResolvedRoute = ResolvedRouteImport.update({
+  id: '/resolved',
+  path: '/resolved',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SeverityResultRoute = SeverityResultRouteImport.update({
+  id: '/severity-result',
+  path: '/severity-result',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SplashRoute = SplashRouteImport.update({
+  id: '/splash',
+  path: '/splash',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TrackingRoute = TrackingRouteImport.update({
+  id: '/tracking',
+  path: '/tracking',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/ai-analysis': typeof AiAnalysisRoute
+  '/history': typeof HistoryRoute
+  '/home': typeof HomeRoute
+  '/login': typeof LoginRoute
+  '/profile': typeof ProfileRoute
+  '/report': typeof ReportRoute
+  '/resolved': typeof ResolvedRoute
+  '/severity-result': typeof SeverityResultRoute
+  '/splash': typeof SplashRoute
+  '/tracking': typeof TrackingRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/ai-analysis': typeof AiAnalysisRoute
+  '/history': typeof HistoryRoute
+  '/home': typeof HomeRoute
+  '/login': typeof LoginRoute
+  '/profile': typeof ProfileRoute
+  '/report': typeof ReportRoute
+  '/resolved': typeof ResolvedRoute
+  '/severity-result': typeof SeverityResultRoute
+  '/splash': typeof SplashRoute
+  '/tracking': typeof TrackingRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/ai-analysis': typeof AiAnalysisRoute
+  '/history': typeof HistoryRoute
+  '/home': typeof HomeRoute
+  '/login': typeof LoginRoute
+  '/profile': typeof ProfileRoute
+  '/report': typeof ReportRoute
+  '/resolved': typeof ResolvedRoute
+  '/severity-result': typeof SeverityResultRoute
+  '/splash': typeof SplashRoute
+  '/tracking': typeof TrackingRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/ai-analysis'
+    | '/history'
+    | '/home'
+    | '/login'
+    | '/profile'
+    | '/report'
+    | '/resolved'
+    | '/severity-result'
+    | '/splash'
+    | '/tracking'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/ai-analysis'
+    | '/history'
+    | '/home'
+    | '/login'
+    | '/profile'
+    | '/report'
+    | '/resolved'
+    | '/severity-result'
+    | '/splash'
+    | '/tracking'
+  id:
+    | '__root__'
+    | '/'
+    | '/ai-analysis'
+    | '/history'
+    | '/home'
+    | '/login'
+    | '/profile'
+    | '/report'
+    | '/resolved'
+    | '/severity-result'
+    | '/splash'
+    | '/tracking'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AiAnalysisRoute: typeof AiAnalysisRoute
+  HistoryRoute: typeof HistoryRoute
+  HomeRoute: typeof HomeRoute
+  LoginRoute: typeof LoginRoute
+  ProfileRoute: typeof ProfileRoute
+  ReportRoute: typeof ReportRoute
+  ResolvedRoute: typeof ResolvedRoute
+  SeverityResultRoute: typeof SeverityResultRoute
+  SplashRoute: typeof SplashRoute
+  TrackingRoute: typeof TrackingRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +182,91 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ai-analysis': {
+      id: '/ai-analysis'
+      path: '/ai-analysis'
+      fullPath: '/ai-analysis'
+      preLoaderRoute: typeof AiAnalysisRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/history': {
+      id: '/history'
+      path: '/history'
+      fullPath: '/history'
+      preLoaderRoute: typeof HistoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/home': {
+      id: '/home'
+      path: '/home'
+      fullPath: '/home'
+      preLoaderRoute: typeof HomeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/profile': {
+      id: '/profile'
+      path: '/profile'
+      fullPath: '/profile'
+      preLoaderRoute: typeof ProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/report': {
+      id: '/report'
+      path: '/report'
+      fullPath: '/report'
+      preLoaderRoute: typeof ReportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resolved': {
+      id: '/resolved'
+      path: '/resolved'
+      fullPath: '/resolved'
+      preLoaderRoute: typeof ResolvedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/severity-result': {
+      id: '/severity-result'
+      path: '/severity-result'
+      fullPath: '/severity-result'
+      preLoaderRoute: typeof SeverityResultRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/splash': {
+      id: '/splash'
+      path: '/splash'
+      fullPath: '/splash'
+      preLoaderRoute: typeof SplashRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tracking': {
+      id: '/tracking'
+      path: '/tracking'
+      fullPath: '/tracking'
+      preLoaderRoute: typeof TrackingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AiAnalysisRoute: AiAnalysisRoute,
+  HistoryRoute: HistoryRoute,
+  HomeRoute: HomeRoute,
+  LoginRoute: LoginRoute,
+  ProfileRoute: ProfileRoute,
+  ReportRoute: ReportRoute,
+  ResolvedRoute: ResolvedRoute,
+  SeverityResultRoute: SeverityResultRoute,
+  SplashRoute: SplashRoute,
+  TrackingRoute: TrackingRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

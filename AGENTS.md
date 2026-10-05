@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep ResQ AI a client-only educational prototype; all emergency analysis, dispatch, location, calling, and tracking behavior must remain explicitly simulated for safety.
