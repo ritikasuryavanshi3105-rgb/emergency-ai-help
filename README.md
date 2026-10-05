@@ -12,6 +12,7 @@ IMPORTANT:
 This is a prototype/demo only. Do not implement real emergency dispatch, real police/ambulance calling, or real medical decision-making. Use simulated/sample data.
 
 DESIGN SYSTEM:
+
 - Modern professional emergency-response design
 - Mobile-first responsive layout
 - Clean white/light background
@@ -33,9 +34,10 @@ Name: Ritika
 MAIN FLOW:
 
 1. SPLASH SCREEN
-Route: /splash
+   Route: /splash
 
 Show:
+
 - Emergency shield/cross logo
 - ResQ AI
 - “Report. Respond. Rescue.”
@@ -45,9 +47,10 @@ Show:
 After 2–3 seconds automatically navigate to /login.
 
 2. LOGIN SCREEN
-Route: /login
+   Route: /login
 
 Show:
+
 - “Welcome Back”
 - Email/Mobile input
 - Password input
@@ -59,9 +62,10 @@ Show:
 Login button should navigate to /home.
 
 3. HOME DASHBOARD
-Route: /home
+   Route: /home
 
 Show:
+
 - “Hello, Ritika 👋”
 - “Emergency Services Online”
 - Notification bell
@@ -69,18 +73,21 @@ Show:
   “🚨 REPORT EMERGENCY”
 
 Quick Emergency section:
+
 - Medical
 - Accident
 - Fire
 - Police
 
 Nearby Services:
+
 - Ambulance — 1.2 km
 - Police — 2.1 km
 - Fire Station — 3.4 km
 - Hospital — 2.7 km
 
 Bottom navigation:
+
 - Home
 - History
 - Profile
@@ -88,12 +95,13 @@ Bottom navigation:
 Report Emergency button navigates to /report.
 
 4. EMERGENCY REPORT
-Route: /report
+   Route: /report
 
 Title:
 “Report Emergency”
 
 Emergency type cards:
+
 - Medical Emergency
 - Road Accident
 - Fire
@@ -101,6 +109,7 @@ Emergency type cards:
 - Other
 
 Fields:
+
 - Emergency description textarea
 - Voice Input button
 - Add Photo button
@@ -116,11 +125,12 @@ On click navigate to /ai-analysis.
 Use React state/localStorage for temporary prototype data.
 
 5. AI ANALYSIS
-Route: /ai-analysis
+   Route: /ai-analysis
 
 Create an attractive AI analysis screen.
 
 Show:
+
 - AI assistant visual
 - “AI is analyzing the emergency…”
 
@@ -137,7 +147,7 @@ After analysis automatically navigate to /severity-result.
 For now use simulated AI analysis.
 
 6. EMERGENCY ASSESSMENT
-Route: /severity-result
+   Route: /severity-result
 
 Title:
 “Emergency Assessment”
@@ -145,6 +155,7 @@ Title:
 Display a professional assessment card.
 
 Sample prototype result:
+
 - CRITICAL EMERGENCY
 - Severity: Critical
 - Confidence: 92%
@@ -161,6 +172,7 @@ with a simulated location such as:
 “Current Location”
 
 Buttons:
+
 - “View Response”
 - “Edit Report”
 
@@ -170,13 +182,14 @@ Edit Report → /report
 The result should be generated from the emergency type selected by the user, but use safe simulated prototype logic.
 
 7. LIVE TRACKING
-Route: /tracking
+   Route: /tracking
 
 Create a simulated live emergency tracking screen.
 
 Show a map-style interface using a visual placeholder, not a real map API.
 
 Map elements:
+
 - User location marker
 - Ambulance marker
 - Route line
@@ -186,6 +199,7 @@ Show:
 LIVE
 
 Bottom information card:
+
 - “Ambulance Arriving”
 - ETA: 6 min
 - AMB-204
@@ -193,6 +207,7 @@ Bottom information card:
 - Distance: 1.2 km
 
 Buttons:
+
 - Call Response Team
 - Share Location
 
@@ -216,7 +231,7 @@ Then enable:
 Complete Emergency → /resolved
 
 8. EMERGENCY RESOLVED
-Route: /resolved
+   Route: /resolved
 
 Show a large success/check icon.
 
@@ -224,6 +239,7 @@ Title:
 “Emergency Resolved”
 
 Emergency summary:
+
 - Road Accident
 - Critical
 - Ambulance + Police
@@ -242,17 +258,19 @@ Completed timeline:
 ✓ Emergency resolved
 
 Buttons:
+
 - View Emergency Report
 - Back to Home
 
 Back to Home → /home.
 
 9. HISTORY
-Route: /history
+   Route: /history
 
 Show previous emergency cards.
 
 Sample:
+
 - Road Accident — Critical — Resolved
 - Medical Emergency — High — Resolved
 - Fire Emergency — Critical — Resolved
@@ -262,14 +280,16 @@ Each card should be clickable and open a simple emergency-details view/modal.
 Bottom navigation should remain visible.
 
 10. PROFILE
-Route: /profile
+    Route: /profile
 
 Show:
+
 - User avatar
 - Ritika
 - Email/mobile
 
 Settings/options:
+
 - Personal Information
 - Emergency Contacts
 - Location Permissions
@@ -282,6 +302,7 @@ Logout should return to /login.
 Bottom navigation should remain visible.
 
 ADDITIONAL UX:
+
 - Add smooth transitions and subtle animations.
 - Add loading states where appropriate.
 - Add toast messages for prototype actions.
@@ -292,6 +313,7 @@ ADDITIONAL UX:
 - Make the layout responsive for desktop and mobile.
 
 TECHNICAL:
+
 - Build using React.
 - Use client-side routing.
 - Use reusable components.
@@ -327,17 +349,9 @@ Home → Profile
 
 Do not create unnecessary extra screens. Focus on making these screens polished, functional, and presentation-ready for a college project demo.
 
-This project was built with [Lovable](https://lovable.dev).
+## Project Architecture
 
-**Live app**: https://emergency-ai-help.lovable.app
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/4baadf72-cc7d-4ced-a717-69f6e7093f9b).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+ResQ AI is an educational emergency-response decision support prototype designed for final-year engineering evaluation. It demonstrates simulated AI triage analysis, emergency CAD dispatch tracking, and citizen ICE profiles.
 
 ## Development
 
